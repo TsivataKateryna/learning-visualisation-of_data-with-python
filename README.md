@@ -5,13 +5,13 @@ This is a learning project aimed at practicing **data visualization in Python** 
 The goal was to explore different types of charts and improve my understanding of visual storytelling with data.  
 
 ## ⚙️ Tech Stack
-- Python                       - Matplotlib
-- NumPy                        - Seaborn
-- Pandas                       - Jupiter Notebook
-
+- Python                      
+- NumPy                        
+- Pandas      
+- Matplotlib  
+- Seaborn               
+- Jupiter Notebook
 - SciPy (comming ...)
-
-# to activate virtual inviroment venv\Scripts\activate
 
 ## Resources
 ### NumPy:
