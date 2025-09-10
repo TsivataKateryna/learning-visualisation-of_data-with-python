@@ -4,18 +4,22 @@ import os
 
 # possible_choice = ['', '', '']
 
-def to_parquet(df) -> None :
-    df.to_parquet("bios_new.parquet", engine='pyarrow', index=False)
+def to_parquet(filename : str) -> None :
+    if filename.lower().endswith('.csv'):
+        df.to_parquet("bios_new.parquet", engine='pyarrow', index=False)
+
+def chose(filename):
+    df = pd.read_csv(filename)
+    to_parquet(filename)
 
 
-def chose():
     pass
 
 
+filename = 'IMDBTop250Movies.csv'
+df = pd.read_csv(filename)
+# print(df.info)
+print(df[['name','year','genre']].head())
+# print(df.columns)
+print(type(df)) # <class 'pandas.core.frame.DataFrame'>
 
-
-df = pd.read_csv('./my_data_kaggle/IMDBTop250Movies.csv')
-# print(df.type)
-print(os.path.exists('data/IMDBTop250Movies.csv'))
-print(os.getcwd())  
-print(os.listdir()) 
