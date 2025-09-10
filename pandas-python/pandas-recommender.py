@@ -19,7 +19,8 @@ def chose(filename):
 filename = 'IMDBTop250Movies.csv'
 df = pd.read_csv(filename)
 # print(df.info)
-print(df[['name','year','genre']].head())
+# print(df[['name','year','genre']].head())
+# print(df.info())
 # print(df.columns)
 print(type(df)) # <class 'pandas.core.frame.DataFrame'>
 
