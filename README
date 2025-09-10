@@ -1,4 +1,4 @@
-# Data Visualization Practice 🎨📊
+# Data Visualization Practice 
 
 ## 📌 About
 This is a learning project aimed at practicing **data visualization in Python** using Matplotlib and Seaborn.  
@@ -6,18 +6,22 @@ The goal was to explore different types of charts and improve my understanding o
 
 ## ⚙️ Tech Stack
 - Python
+- NumPy
 - Pandas
 - Matplotlib
 - Seaborn
+- Jupiter Notebook
 
 # to activate virtual inviroment venv\Scripts\activate
 
-Sources:
+## Resources
+numpy:
+- [NumPy Documentation](https://numpy.org/doc/)
+- [NumPy Tutorial on YouTube](https://www.youtube.com/watch?v=QUT1VHiLmmI)
+- Notes from the course *LINFO1113: Algorithmique Numérique* (Université UCL)
+
 pandas:
 youtube:
 https://www.youtube.com/watch?v=2uvysYbKdjM&t=12s
 pandas documentation: https://pandas.pydata.org/docs/
 
-numpy:
-numpy documentation: https://numpy.org/doc/
-youtube: https://www.youtube.com/watch?v=QUT1VHiLmmI
