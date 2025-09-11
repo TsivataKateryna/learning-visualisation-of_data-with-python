@@ -5,7 +5,7 @@ This is a learning project aimed at practicing **data visualization in Python** 
 The goal was to explore different types of charts and improve my understanding of visual storytelling with data.  
 
 ## ⚙️ Tech Stack
-- Python                      
+- Python                
 - NumPy                        
 - Pandas      
 - Matplotlib  
@@ -23,6 +23,7 @@ The goal was to explore different types of charts and improve my understanding o
 - [Pandas Tutorial on YouTube](https://www.youtube.com/watch?v=2uvysYbKdjM&t=12s)
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [IMDB Top 250 Movies Dataset (Kaggle)](https://www.kaggle.com/datasets/rajugc/imdb-top-250-movies-dataset?resource=download)
+- [Coffee Sales Dataset (Kaggle)](https://www.kaggle.com/datasets/navjotkaushal/coffee-sales-dataset)
 
 
 ### Matplotlib:

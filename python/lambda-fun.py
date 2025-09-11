@@ -1,6 +1,12 @@
-import math as mt
 
-'learning lambda-function'
+'''
+A file for studying lambda functions in Python.
+
+Contains:
+- simple lambda functions
+'''
+
+import math as mt
 
 square = lambda x: x**2
 # print(square(5)) 
@@ -14,7 +20,6 @@ add = lambda a, b: a + b
 ''' 
 Determining whether a number is even or odd.
 return : 
-
 '''
 isEven = lambda a: True if a % 2 == 0 else False 
 # print(isEven(1)) # false
@@ -25,6 +30,8 @@ isEven = lambda a: True if a % 2 == 0 else False
 # print(isEven(100000000000000001)) # false
 
 'Calculating the sum of the squares of the elements in a list.'
+list_numbers = [1, 2, 3, 4]
+sum_squares = sum(map(lambda x: x**2, list_numbers))
 
 
 'Calculating the arithmetic mean of a list of numbers.'
