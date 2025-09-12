@@ -1,8 +1,3 @@
-
-
-
-
-
 import os
 import numpy as np
 import pandas as pd
@@ -96,8 +91,18 @@ def stat_name() -> None:
 
 def stat_budget() -> None:
     # print(movies['budget'].values)
-    print(type(movies.loc[0, 'budget']))
-    print("here   ")
+    # print(type(movies.loc[0, 'budget']))
+    # print("here   ")
+
+    # the most expensive film
+    biggest_budget : int = movies_new_df['budget'].max()
+    expensive_film = movies_new_df.loc[movies_new_df['budget'] == biggest_budget]
+    print("the most expensive film is ", expensive_film[['name', 'rank', 'budget']])
+
+    # the cheapest film
+    smallest_budget : int = movies_new_df[movies_new_df['budget'] != -1]['budget'].min()
+    cheapest_film = movies_new_df.loc[movies_new_df['budget'] == smallest_budget]
+    print("the most cheapest film is ", cheapest_film[['name', 'rank', 'budget']])
 
 
 
@@ -135,6 +140,6 @@ movies_new_df['budget'] = movies_new_df['budget'].replace('Not Available', '-1')
 # to change box_office
 movies_new_df['box_office'] = movies_new_df['box_office'].astype(str)
 movies_new_df['box_office'] = movies_new_df['box_office'].replace('Not Available', '-1')
-# print(movies_new_df.loc[movies_new_df['box_office'] == '-1', ['name', 'budget', 'box_office']])
+stat_budget()
 
 
