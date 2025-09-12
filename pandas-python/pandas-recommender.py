@@ -1,3 +1,8 @@
+
+
+
+
+
 import os
 import numpy as np
 import pandas as pd
@@ -21,8 +26,9 @@ def convert_time_int(str_time : str) -> int:
     
     return hours * 60 + minutes
 
-def stat_box_office() -> None:
-    print(movies['box_office'].values)
+def helper_budget() :
+    pass
+
 
 '''
 statistics related to time:
@@ -44,9 +50,12 @@ def stat_year() -> None:
     print("number of films per year \n")
     print(year_counts_sorted.head(5))
 
-def stat_certificate() -> None:
-    pass
-
+'''
+statistics related to duration:
+shortest film
+longest film
+mean duration
+'''
 def stat_run_time() -> None:
     # shortest film
     shortest_duration : int = movies_new_df[movies_new_df['run_time_min'] != -1]['run_time_min'].min()
@@ -66,16 +75,17 @@ def stat_run_time() -> None:
     minutes = int(round(mean_duration - hours * 60))
     print(hours, "h ", minutes , "m")
 
-
-def stat_tagline() -> None:
-    # print(movies['tagline'].values)
-    pass
-
+'''
+statistics related to rating:
+mean rating
+median rating
+'''
 def stat_rating() -> None:
-    mean_rating : float = movies['rating'].mean()
-    print("mean_rating ", mean_rating)
-    median_rating : int = movies['rating'].median()
-    print("median_rating ", median_rating)
+    mean_rating : float = round(movies['rating'].mean(), 2)
+    print("mean rating ", mean_rating)
+    median_rating : float = movies['rating'].median()
+    print("median rating ", median_rating)
+
 
 def stat_name() -> None:
     print(movies['name'].values)
@@ -85,7 +95,11 @@ def stat_name() -> None:
     # df['name'].iloc[0]
 
 def stat_budget() -> None:
-    print(movies['budget'].values)
+    # print(movies['budget'].values)
+    print(type(movies.loc[0, 'budget']))
+    print("here   ")
+
+
 
 def to_prepare_statistic() -> None:
     movies['directors'] = movies['directors'].str.split(',')
@@ -105,9 +119,22 @@ movies = pd.read_csv(filename)
 movies_new_df = movies.copy()
 movies_new_df.to_parquet("IMDBTop250Movies_new.parquet", engine='pyarrow', index=False)
 movies_new_df['run_time_min'] = movies['run_time'].apply(convert_time_int)
-# print(movies_new_df[movies_new_df['run_time'] == "Not Available"][['name', 'directors', 'run_time', 'run_time_min']])
 
-stat_run_time()
+print(movies_new_df.info())
+# stat_run_time()
+# stat_rating()
+# stat_budget()
 
+# to change budget
+movies_new_df['budget'] = movies_new_df['budget'].astype(str)
+movies_new_df['budget'] = movies_new_df['budget'].replace('Not Available', '-1')
+# print(movies_new_df.loc[movies_new_df['budget'] == '-1', ['name', 'budget']])
+# print(movies_new_df.loc[movies_new_df['budget'] == '-1', ['name', 'budget', 'box_office']])
+# stat_budget()
+
+# to change box_office
+movies_new_df['box_office'] = movies_new_df['box_office'].astype(str)
+movies_new_df['box_office'] = movies_new_df['box_office'].replace('Not Available', '-1')
+# print(movies_new_df.loc[movies_new_df['box_office'] == '-1', ['name', 'budget', 'box_office']])
 
 

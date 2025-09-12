@@ -14,18 +14,18 @@ The goal was to explore different types of charts and improve my understanding o
 - SciPy (comming ...)
 
 ## Resources
-### NumPy:
+### NumPy
 - [NumPy Documentation](https://numpy.org/doc/)
 - [NumPy Tutorial on YouTube](https://www.youtube.com/watch?v=QUT1VHiLmmI)
 - Notes from the course *LINFO1113: Algorithmique Numérique* (Université UCL)
 
-### Pandas:
+### Pandas
 - [Pandas Tutorial on YouTube](https://www.youtube.com/watch?v=2uvysYbKdjM&t=12s)
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [IMDB Top 250 Movies Dataset (Kaggle)](https://www.kaggle.com/datasets/rajugc/imdb-top-250-movies-dataset?resource=download)
 - [Coffee Sales Dataset (Kaggle)](https://www.kaggle.com/datasets/navjotkaushal/coffee-sales-dataset)
 
-### Matplotlib:
+### Matplotlib
 - [Matplotlib Tutorial on YouTube](https://www.youtube.com/watch?v=3Xc3CA655Y4)
 
 ### SciPy
