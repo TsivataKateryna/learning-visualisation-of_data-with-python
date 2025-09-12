@@ -2,17 +2,20 @@ import os
 import numpy as np
 import pandas as pd
 
+'''
+
+'''
 def convert_time_int(str_time : str) -> int:
     hours : int = 0
     min : int = 0
 
-    if 'h' in duration:
-        hours_part = duration.split('h')[0]
+    if 'h' in str_time:
+        hours_part = str_time.split('h')[0]
         hours = int(hours_part.strip())
-        duration = duration.split('h')[1] 
+        str_time = str_time.split('h')[1] 
     
-    if 'm' in duration:
-        minutes_part = duration.split('m')[0]
+    if 'm' in str_time:
+        minutes_part = str_time.split('m')[0]
         minutes = int(minutes_part.strip())
     
     return hours * 60 + minutes
@@ -20,20 +23,24 @@ def convert_time_int(str_time : str) -> int:
 def stat_box_office() -> None:
     print(df['box_office'].values)
 
-''
+'''
+statistics related to time:
+the oldest film
+the newest film
+number of films per year
+'''
 def stat_year() -> None:
-    the_earliest_year : int = df['year'].min()
-    the_earliest_film = df.loc[df['year'] == the_earliest_year]
-    # print(" sidoiervner", type(the_earliest_film))
-    print("the_earliest_film \n", the_earliest_film)
+    newest_year : int = df['year'].min()
+    newest_film = df.loc[df['year'] == newest_year]
+    print("the newest film is \n", newest_film)
 
-    the_oldest_year : int = df['year'].max()
-    the_oldest_film = df.loc[df['year'] == the_oldest_year]
-    print("the_oldest_film \n", the_oldest_film)
+    oldest_year : int = df['year'].max()
+    oldest_film = df.loc[df['year'] == oldest_year]
+    print("the oldest film is \n", oldest_film)
     
-    print("Number of films per year")
     year_counts = df['year'].value_counts()
     year_counts_sorted = year_counts.sort_values(ascending=False)
+    print("number of films per year \n")
     print(year_counts_sorted.head(5))
 
 def stat_certificate() -> None:
@@ -41,6 +48,10 @@ def stat_certificate() -> None:
 
 def stat_run_time() -> None:
     print(df['run_time'].values)
+    example = df.loc[0, 'run_time']
+    print(example)
+    # print("here  ", type(example))
+    print(convert_time_int(example))
 
 def new_data() -> None:
     new_data = df.copy()
@@ -88,30 +99,7 @@ def movie_statistics()-> None:
 filename = 'IMDBTop250Movies.csv'
 df = pd.read_csv(filename)
 print(df.info())
-stat_name()
+stat_run_time()
+# stat_name()
 
-# stat_rating()
-# stat_tagline()
-# stat_run_time()
-# stat_budget()
-# new_data()
 
-# print(df.head())
-# print(df['rating'])
-# stat_rating()
-# stat_year()
-# print(df['certificate'])
-# print(df['box_office'].values)
-# print(df['directors'].values)
-# to_prepare_statistic()
-# print(df['directors'].values)
-# print(df['directors'].nunique())
-# print(df['genre'].unique())
-# print(df['genre'].nunique())
-
-# print(df[['name','year','genre']].head())
-# print(df.columns)
-# print(type(df)) # <class 'pandas.core.frame.DataFrame'>
-# movie_statistics()
-
-# stat_box_office()

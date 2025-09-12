@@ -28,3 +28,6 @@ The goal was to explore different types of charts and improve my understanding o
 
 ### Matplotlib:
 - [Matplotlib Tutorial on YouTube](https://www.youtube.com/watch?v=3Xc3CA655Y4)
+
+### SciPy
+- [SciPy Tutorial on Youtube](https://www.youtube.com/watch?v=jmX4FOUEfgU&list=PL-ubIFKKXvU2hxwHOcXNseCT783bbdv7i&index=8)

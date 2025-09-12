@@ -19,7 +19,6 @@ add = lambda a, b: a + b
 
 ''' 
 Determining whether a number is even or odd.
-return : 
 '''
 isEven = lambda a: True if a % 2 == 0 else False 
 # print(isEven(1)) # false
