@@ -1,10 +1,10 @@
 # Data Visualization Practice 
 
-## 📌 About
+## About
 This is a learning project aimed at practicing **data visualization in Python** using Matplotlib and Seaborn.  
 The goal was to explore different types of charts and improve my understanding of visual storytelling with data.  
 
-## ⚙️ Tech Stack
+## Tech Stack
 - Python                
 - NumPy                        
 - Pandas      
@@ -24,7 +24,6 @@ The goal was to explore different types of charts and improve my understanding o
 - [Pandas Documentation](https://pandas.pydata.org/docs/)
 - [IMDB Top 250 Movies Dataset (Kaggle)](https://www.kaggle.com/datasets/rajugc/imdb-top-250-movies-dataset?resource=download)
 - [Coffee Sales Dataset (Kaggle)](https://www.kaggle.com/datasets/navjotkaushal/coffee-sales-dataset)
-
 
 ### Matplotlib:
 - [Matplotlib Tutorial on YouTube](https://www.youtube.com/watch?v=3Xc3CA655Y4)

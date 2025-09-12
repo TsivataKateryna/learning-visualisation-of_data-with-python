@@ -6,6 +6,7 @@ Contains:
 - simple lambda functions
 '''
 
+from functools import reduce
 import math as mt
 
 square = lambda x: x**2
@@ -28,6 +29,11 @@ isEven = lambda a: True if a % 2 == 0 else False
 # print(isEven(1000000000)) # true
 # print(isEven(100000000000000001)) # false
 
+'Random Functions'
+function_1 = lambda x: (x-3)**2
+function_2 = lambda x, y: (x-3)**2 - mt.sqrt(y)
+# function_3 = 
+
 'Calculating the sum of the squares of the elements in a list.'
 list_numbers = [1, 2, 3, 4]
 sum_squares = sum(map(lambda x: x**2, list_numbers))
@@ -36,10 +42,6 @@ sum_squares = sum(map(lambda x: x**2, list_numbers))
 'Calculating the arithmetic mean of a list of numbers.'
 
 
-
-
-
-
-numbers = [1, 2, 3, 4]
-squared_numbers = list(map(lambda x: x**2, numbers))
+# numbers = [1, 2, 3, 4]
+# squared_numbers = list(map(lambda x: x**2, numbers))
 # print(squared_numbers)
