@@ -58,6 +58,13 @@ def stat_rating() -> None:
     median_rating : int = df['rating'].median()
     print("median_rating ", median_rating)
 
+def stat_name() -> None:
+    print(df['name'].values)
+    print(df['name'].iloc[0])
+    print(type(df['name'].iloc[0]))
+    print(len(df['name'].iloc[0]))
+    # df['name'].iloc[0]
+
 def stat_budget() -> None:
     print(df['budget'].values)
 
@@ -72,23 +79,16 @@ def to_parquet(filename : str) -> None :
 def movie_statistics()-> None:
     unique_genre : int = df['genre'].nunique()
     list_genres = df['genre'].unique()
-    # print(list_genres)
+    print(list_genres)
 
 
 
-    pass
-
-def chose(filename):
-    df = pd.read_csv(filename)
-    to_parquet(filename)
-
-
-    pass
 
 
 filename = 'IMDBTop250Movies.csv'
 df = pd.read_csv(filename)
-# print(df.info())
+print(df.info())
+stat_name()
 
 # stat_rating()
 # stat_tagline()
